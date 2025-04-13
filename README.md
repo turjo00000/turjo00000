@@ -1,23 +1,14 @@
-- 👋 # Turjo Sarker
-**Free Fire Esports Player**  
-IGN: **OLD FALCON**  
-Team: **OLD CLASHERS**  
-Role: **Sniper**
+# OLD FALCON - Sniper Artist Portfolio
+
+Welcome to the official portfolio website of **Turjo Sarker**, known in the esports world as **OLD FALCON** — the **Sniper Artist**.
 
 ## About Me
-I'm passionate about mobile esports and compete in Free Fire tournaments. Always pushing my skills as a sniper and working with my team to dominate.
+I'm a competitive esports player specializing in sniper gameplay. I'm known for my precise shots, clutch moments, and sharp instincts. People know me as the **Sniper Artist** because every shot is a masterpiece.
 
-## Contact
-DM me in-game: OLD FALCON
-, I’m @turjo00000
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+## Team
+- **OLD CLASHERS ESPORTS**
+- Role: **Sniper**
+- Status: Active Competitive Player
 
-<!---
-turjo00000/turjo00000 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+## Live Website
+Once GitHub Pages is enabled, your portfolio will be accessible here:
